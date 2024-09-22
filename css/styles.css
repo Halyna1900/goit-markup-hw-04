@@ -57,6 +57,19 @@ img {
 /* ============== /COMMON STYLES ============== */
 
 /* ============== HEADER STYLES ============== */
+.list-link .line {
+  position: relative;
+}
+.list-link .line::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  background-color:#404bbf;
+  border-radius: 2px;
+  width: 100%;
+  height: 4px;
+}
 .page-logotype {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
@@ -139,6 +152,7 @@ img {
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
+  max-width: 1440px;
 }
 .herro-title {
   font-weight: 700;
@@ -168,10 +182,11 @@ img {
   padding: 16px 32px;
   height: 56px;
   border: none;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button:hover,
 .button:focus {
-  background: #404bbf;
+  background-color: #404bbf;
 }
 /* ============== /HERRO STYLES ============== */
 
@@ -230,6 +245,7 @@ img {
   background: #ffffff;
   width: calc((100% - 72px) / 4);
   border-radius: 0 0 4px 4px;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 .team-title {
   font-weight: 700;
@@ -270,33 +286,37 @@ img {
 
 .social-list-items {
   display: flex;
-  width: 40px;
+  width: 40px; 
   height: 40px;
-  border-radius: 50%;
-  background-color: #4d5ae5;
-  line-height: 0;
-  align-items: center;
-  justify-content: center;
-}
+ }
 
 .social-list {
   display: flex;
   flex-direction: row;
   gap: 24px;
   justify-content: center;
-  margin-top: 8px;
-  margin-bottom: 32px;
+  align-items: center;
 }
 
 .social-list-link {
+  display: flex;
+  padding: 12px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  background-color: #4d5ae5;
+  line-height: 0;
+  align-items: center;
+  justify-content: center;
 }
 .social-icon {
   fill: #f4f4fd;
+  display: flex;
 }
 
-.social-list-items:hover,
-.social-list-items:focus {
+.social-list-link:hover,
+.social-list-link:focus {
   background-color: #404bbf;
 }
 /* ============== /OUR TEAM STYLES ============== */
@@ -374,8 +394,8 @@ img {
 }
 
 .overlay-contr {
-    position: relative;
-    overflow: hidden;
+  position: relative;
+  overflow: hidden;
 }
 
 /* ============== /PORTFOLIO  STYLES ============== */
@@ -407,12 +427,12 @@ img {
 }
 
 .social-media-text {
- font-weight: 500;
- font-size: 16px;
- line-height: 1.5;
- letter-spacing: 0.02em;
- color: #fff;
- margin-bottom: 16px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #fff;
+  margin-bottom: 16px;
 }
 .social-icon-footer {
   fill: #f4f4fd;
@@ -428,15 +448,15 @@ img {
   flex-direction: row;
 }
 
-.social-list-link-footer{
-display: flex;
-width: 40px;
-height: 40px;
-border-radius: 50%;
-background-color: #4d5ae5;
-line-height: 0;
-align-items: center;
-justify-content: center;
+.social-list-link-footer {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #4d5ae5;
+  line-height: 0;
+  align-items: center;
+  justify-content: center;
 }
 .container-footer {
   display: flex;
